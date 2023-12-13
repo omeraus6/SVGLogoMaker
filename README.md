@@ -1,71 +1,63 @@
 # SVGLogoMaker
 
-GIVEN a command-line application that accepts user input
-Q1
-WHEN I am prompted for text
-THEN I can enter up to three characters
-Q2
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-Q2
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-Q3
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
+## Description
 
-WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
-AND the output text "Generated logo.svg" is printed in the command line
+I learn OOP and how to sperate the code to many files and make them more organized , I learn how to test the code before I run it inside the project,I build this project to generate logo using SVG file 
 
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+- What problem does it solve?
+1- add user input using prompit for logo-text,color for logo-text,backgroung-shape(circle, triangle, and square) and the shape-color 
+2- when user input logo-text more than 3 char , the project will slice the text for first 3 number
+3- when user input hexadicimal color code the project will send the code to class to check if the code found
+4- user can check one of the shape list 
+5- when user input all the question , the project will generate a new SVG file name as logo.svg
+6- about the test , I have two files one for testing the (circle, triangle, and square) classes , second one for (Textchar, Textcolor)
 
-first question : add three characters for logo text
-second question : text color(color keyword or hexadecimal)
-thired question : shape(list: circle, triangle, and square)
-fourth question : shapes color(color keyword or hexadecimal)
+## Installation
 
-Questions
--Enter text for the logo. (must not be more than 3 char)
--Enter the text color 
--select a shape for the logo
--Enter the shape color
+the project has two installation process one for (package.json) and it's install using this command in terminal "npm init"
+another process is (node_modules) and it's install using this command in terminal "npm install inquerer@8.2.4" also has "npm i -D jest " to install devDependencies to package.json file and then add Jest to test("scripts": {"test":"jest"})
 
-massage come: Generated logo.svg
+## Usage
+run the project from the terminal and write "node index.js", if the project doesn't show the question starting generated that mean we have to install packages as expline on installation.
+after user input all the question , the projet will generate logo.svg file inside examples folder
 
-run app : npm index.js
+github :  https://github.com/omeraus6/SVGLogoMaker
 
-when open logo.svg file show (300x200 pixel)
+![alt text](images/1.png)
+image 1: Question input come from generate function question and the question save on arrat
+
+![alt text](images/2.png)
+image 2: Readme-files folders
+
+![alt text](images/3.png)
+image 3: Part from README.md generate
+
+![alt text](images/4.png)
+image 4: function check if the license array if it same as the user input
+
+![alt text](images/5.png)
+image 5: generate README function
+
+![alt text](images/6.png)
+image 6: question and names array 
+
+![alt text](images/7.png)
+image 7: this function generate question prompt from question and names array.
+          dataobj is an object variable collect the data value from user
+
+![alt text](images/8.png)
+image 8: Save file function
+
+![alt text](run-video/readmegenerate.mp4)
+video: show the project run
 
 
-rectangle
-<rect x="10" y="10" width="30" height="30"/> squre
-<rect x="60" y="10" rx="10" ry="10" width="30" height="30"/>rectangle
-
-circle
-<circle cx="25" cy="75" r="20"/>
-
-text
-<text x="10" y="10">Hello World!</text>
 
 
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+## Credits
 
-  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+Thank you for tips and sugestion from Bootcamp instructors and classmates, I hava used https://www.w3schools.com/ , https://stackoverflow.com/ and https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template to reserch information 
 
-  <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
-  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+## License
 
-  <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
-  <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
-      stroke="orange" fill="transparent" stroke-width="5"/>
-
-  <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
-      stroke="green" fill="transparent" stroke-width="5"/>
-
-  <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
-</svg>
-
+Please refer to the LICENSE in the repo.
