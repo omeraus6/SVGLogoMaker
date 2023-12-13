@@ -1,5 +1,15 @@
 # SVGLogoMaker
 
+
+## Table of Contents (Optional)
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+
 ## Description
 
 I learn OOP and how to sperate the code to many files and make them more organized , I learn how to test the code before I run it inside the project,I build this project to generate logo using SVG file 
@@ -18,38 +28,42 @@ the project has two installation process one for (package.json) and it's install
 another process is (node_modules) and it's install using this command in terminal "npm install inquerer@8.2.4" also has "npm i -D jest " to install devDependencies to package.json file and then add Jest to test("scripts": {"test":"jest"})
 
 ## Usage
-run the project from the terminal and write "node index.js", if the project doesn't show the question starting generated that mean we have to install packages as expline on installation.
+run the project from the terminal and write "node index.js", if the project doesn't show the question starting generated that mean we have to install packages as explaine on [Installation](#installation).
 after user input all the question , the projet will generate logo.svg file inside examples folder
 
 github :  https://github.com/omeraus6/SVGLogoMaker
 
 ![alt text](images/1.png)
-image 1: Question input come from generate function question and the question save on arrat
+image 1: SVGLogoMaker folder
 
 ![alt text](images/2.png)
-image 2: Readme-files folders
+image 2: lib folder test (jest)
 
 ![alt text](images/3.png)
-image 3: Part from README.md generate
+image 3: project run
 
 ![alt text](images/4.png)
-image 4: function check if the license array if it same as the user input
+image 4: logo.svg generated
 
 ![alt text](images/5.png)
-image 5: generate README function
+image 5: logo.svg output result
 
 ![alt text](images/6.png)
-image 6: question and names array 
+image 6: 
 
 ![alt text](images/7.png)
-image 7: this function generate question prompt from question and names array.
-          dataobj is an object variable collect the data value from user
+image 7: 
 
 ![alt text](images/8.png)
-image 8: Save file function
+image 8: 
 
-![alt text](run-video/readmegenerate.mp4)
-video: show the project run
+![alt text](images/9.png)
+image 9: 
+
+![alt text](images/10.png)
+image 10: from img 6-10 : project code
+
+walkthrough video : https://drive.google.com/file/d/16uiZpJMvWVE42D4vxtX6w0aek-UfLKse/view
 
 
 
