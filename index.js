@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const FinalLogo = require("./lib/shapes");
+
 
 inquirer
   .prompt([
@@ -21,14 +23,28 @@ inquirer
     },
     {
       type: 'input',
-      name: 'shapcolor',
+      name: 'shapecolor',
       message: 'Enter the shape color',
     },
   ])
   .then((data) => {
-    //const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
 
-    //fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-      //err ? console.log(err) : console.log('Success!')
-   // );
+    let result;
+    let finallogo;
+    switch(data.logoshap) {
+      case 'circle':
+         finallogo = new FinalLogo.Circle(data.text,data.shapecolor,data.logoshap,data.textcolor);         
+        break;
+      case 'triangle':
+         finallogo = new FinalLogo.Triangle(data.text,data.shapecolor,data.logoshap,data.textcolor);
+        break;
+      case 'square':
+          finallogo = new FinalLogo.Square(data.text,data.shapecolor,data.logoshap,data.textcolor);
+    }
+
+    fs.writeFile("./examples/logo.svg", finallogo.createSvg(), (err) =>
+      err ? console.log(err) : console.log('Generated logo.svg')
+    );
+   
   });
+
