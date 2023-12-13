@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const FinalLogo = require("./lib/shapes");
+const Validate = require('./lib/validation');
 
-
+//question prompit
 inquirer
   .prompt([
     {
@@ -28,7 +29,7 @@ inquirer
     },
   ])
   .then((data) => {
-
+    //let validate = new Validate.Textchar()
     let result;
     let finallogo;
     switch(data.logoshap) {
